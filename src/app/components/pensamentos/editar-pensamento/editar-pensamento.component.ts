@@ -31,11 +31,13 @@ export class EditarPensamentoComponent implements OnInit {
     }
 
     editarPensamento() {
-
+      this.serice.editar(this.pensamento).subscribe(() => {
+        this.router.navigate(['/listarPensamento'])
+      })
     }
 
     cancelar() {
-
+      this.router.navigate(['/listarPensamento'])
     }
 
 }
